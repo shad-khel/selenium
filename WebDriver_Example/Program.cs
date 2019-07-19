@@ -35,7 +35,7 @@ namespace WebDriver_Example
 
             Console.WriteLine("Results found :" + elements.Count);
 
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }

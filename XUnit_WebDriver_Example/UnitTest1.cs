@@ -27,6 +27,7 @@ namespace XUnit_WebDriver_Example
         public void Dispose()
         {
             _seleniumDriver.Close();
+            _seleniumDriver.Dispose();
         }
 
         [Fact]
