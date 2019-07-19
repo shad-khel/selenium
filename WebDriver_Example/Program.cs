@@ -12,7 +12,10 @@ namespace WebDriver_Example
             //https://www.azuredevopslabs.com/labs/vstsextend/selenium/
             //https://docs.microsoft.com/en-us/azure/devops/pipelines/test/continuous-test-selenium?view=azure-devops
 
-            IWebDriver driver = new ChromeDriver(AppContext.BaseDirectory)
+            var chromeOptions = new ChromeOptions();
+            chromeOptions.AddArgument("headless");
+
+            IWebDriver driver = new ChromeDriver(AppContext.BaseDirectory, chromeOptions)
             {
                 Url = "https://www.google.com/"
             };

@@ -9,8 +9,7 @@ namespace XUnit_WebDriver_Example
     public class UnitTest1: IDisposable
     {
         private readonly IWebDriver _seleniumDriver;
-
-
+        
         public UnitTest1()
         {
             _seleniumDriver = new ChromeDriver(AppContext.BaseDirectory)
