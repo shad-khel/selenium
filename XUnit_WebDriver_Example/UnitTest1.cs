@@ -36,5 +36,18 @@ namespace XUnit_WebDriver_Example
             _seleniumDriver.Url = "https://www.google.com/";
             Assert.Equal("Google", _seleniumDriver.Title);
         }
+
+        [Fact]
+        public void SearchHelloWorld_ReturnsResults()
+        {
+            _seleniumDriver.Url = "https://www.google.com/";
+
+            var searchbox = _seleniumDriver.FindElement(By.XPath("/html/body/div[1]/div[3]/form/div[2]/div/div[1]/div/div[1]/input"));
+            searchbox.SendKeys("Hello World!" + Keys.Enter);
+            var elements = _seleniumDriver.FindElements(By.TagName("h3"));
+
+            Assert.True( elements.Count > 0);  
+        }
+
     }
 }
