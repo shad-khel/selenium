@@ -15,7 +15,7 @@ namespace XUnit_WebDriver_Example
             var chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("headless");
 
-            _seleniumDriver = new ChromeDriver(AppContext.BaseDirectory, chromeOptions)
+            _seleniumDriver = new ChromeDriver(AppContext.BaseDirectory + "/chromedriver_win32", chromeOptions)
             {
                 Url = "https://www.google.com/"
             };
